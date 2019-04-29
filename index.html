@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crystal Collector</title>
+    <!-- CSS Reset -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <!-- Bootstrap 4.3.1 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- jQuery 3.3.1 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="bg">
+        <p class="py-5 text-center">Testing</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="display">Current Score: <span id="currentScore"></span></div>
+                    <div class="display">Goal Score: <span id="goalScore"></span></div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="display">Wins: <span id="wins"></span></div>
+                    <div class="display">Losses: <span id="losses"></span></div>
+                    <div onclick="crystalGame.newGame()" id="newGame">New Game</div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="crystal" id="crystal-g" value="g"><img class="crystalImg" src="assets/images/crystal-green.png">
+                    </div>
+                    <div class="crystal" id="crystal-b" value="b"><img class="crystalImg" src="assets/images/crystal-blue.png">
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="crystal" id="crystal-y" value="y"><img class="crystalImg" src="assets/images/crystal-yellow.png">
+                    </div>
+                    <div class="crystal" id="crystal-r" value="r"><img class="crystalImg" src="assets/images/crystal-red.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Local JavaScript -->
+    <script src="assets/javascript/game.js"></script>
+</body>
+
+</html>
