@@ -1,16 +1,21 @@
-body, html {
+body,
+html {
     height: 100%;
-    font-family:Niconne,cursive;
-    font-size:1.2rem;
-    background-color:#001;
+    font-family: Niconne, cursive;
+    font-size: 1.2rem;
+    background-color: #001;
 }
 
 h1 {
-    text-align:center;
-    text-decoration:double;
-    color:#eee;
-    opacity:0.75;
-    padding:50px 0;
+    text-align: center;
+    text-decoration: double;
+    color: #eee;
+    opacity: 0.75;
+    padding: 50px 0;
+}
+
+h5 {
+    color:#444;
 }
 
 .bg {
@@ -22,54 +27,76 @@ h1 {
 }
 
 .crystal {
-    background-color:#111;
+    background-color: #111;
     opacity: 0.8;
-    border:2px solid #555;
-    width:100%;
+    border: 2px solid #777;
+    width: 100%;
 }
 
 .crystalImg {
-    width:100%;
+    width: 100%;
+}
+
+.footer {
+    position:fixed;
+    right:0;
+    bottom:0;
+    left:0;
 }
 
 .scores {
-    font-size:3rem;
+    font-size: 3rem;
     font-weight: bolder;
-    height:auto;
-    width:auto;
+    height: auto;
+    width: auto;
     border: darkgray solid 1px;
     background-color: #444;
     color: #ccc;
-    text-align:center;
-    margin-bottom:15px; 
+    text-align: center;
+    margin-bottom: 15px;
     opacity: 0.8;
 }
 
 .display {
-    height:45px;
-    width:auto;
+    height: 45px;
+    width: auto;
     border: darkgray solid 1px;
     background-color: #444;
     color: #ccc;
-    text-align:center;
-    margin-bottom:15px; 
+    text-align: center;
+    margin-bottom: 15px;
     opacity: 0.8;
 }
 
 #newGame {
-    height:45px;
-    width:100%;
+    height: 45px;
+    width: 100%;
     border: grey 1px solid;
-    background-color:#222;
-    color:#ccc;
-    text-align:center;
-    line-height:40px;
+    background-color: #222;
+    color: #eee;
+    text-align: center;
+    line-height: 40px;
     opacity: 0.8;
     padding: 5px;
+    margin-bottom: 15px;
+    animation: glowing 0.7s infinite alternate;
 }
 
 #commentary {
     color: white;
     font-size: 1.4rem;
-    padding:15px;
+    padding: 15px;
+}
+
+
+@keyframes glowing {
+    0% {
+        background-color: #206;
+        box-shadow: 0 0 5px #206;
+    }
+
+    100% {
+        background-color: #53f;
+        box-shadow: 0 0 30px #53f;
+    }
 }

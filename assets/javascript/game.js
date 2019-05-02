@@ -61,6 +61,7 @@ crystalGame = {
             // Nothing happens - keep stashing crystals!
         } else if (currentScore === goalScore) {
             // Show winning comment; increase win counter, disable crystal buttons, show newGame button.
+            $("audio#win")[0].play();
             $("#commentary").fadeOut(function () {
                 $(this).text("Thou hast obtained sufficient crystals with which to escape! The dragon was not able to pursue you successfully, and thou hast made a heroic escape. Congratulations! Click 'New Game' to pursue another journey of thievery.").fadeIn();
             });
@@ -68,6 +69,7 @@ crystalGame = {
             crystalGame.gameEnd();
         } else if (currentScore > goalScore) {
             // Same as winning comment, but increases losses and shows losing message instead.
+            $("audio#lose")[0].play();
             $("#commentary").fadeOut(function () {
                 $(this).text("Thine greed hath burdened you with an overabundance of crystals. The dragon hath woken up. Thou hath tried to run away, but were blocked in front. The dragon attacks! Thy Hit decreased by 37. Thou art dead. Clicketh 'New Game' to try again.").fadeIn();
             });
@@ -80,16 +82,8 @@ crystalGame = {
         $("#losses").text(crystalGame.losses);
         $(".crystal").prop("disabled", true);
         $(".crystal").fadeTo(500,0.33);
-        $("#newGame").show();
+        $("#newGame").fadeIn();
     },
-
-    // New Game button animation
-    buttonAnimate: function (e) {
-        while (0 !== 1) {
-            $("#newGame").fadeTo(1200,0.25);
-            $("#newGame").fadeTo(1200,1.00);
-        }
-    }
 }
 
 
@@ -105,6 +99,10 @@ $(".crystal").click(function () {
 });
 
 // Simply runs the game when the web page initially loads.
+$("#newGame").hide();
+$("#bgm").prop("volume",0.2);
+$("#win").prop("volume",0.2);
+$("#lose").prop("volume",0.2);
 $(document).ready(crystalGame.newGame());
 
 /* To do
