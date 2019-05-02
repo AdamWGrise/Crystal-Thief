@@ -22,14 +22,29 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h1>Heist of the Dragon Crystals</h1>
+                    <h1>Heist of the Dragon's Crystals</h1>
                 </div>
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="display">Crystals Held: <span class="counts" id="currentScore"></span></div>
-                        <div class="display">Crystals to Steal: <span class="counts" id="goalScore"></span></div>
-                        <div class="display">Successful Heists: <span class="counts" id="wins"></span></div>
-                        <div class="display">Dragon Meals: <span class="counts" id="losses"></span></div>
+                        <div class="row">
+                            <div class="col-sm">
+                                <div class="display">Bags:</div>
+                                <div class="scores" id="currentScore"></div>
+                            </div>
+                            <div class="col-sm">
+                                <div class="display">Goal:</div>
+                                <div class="scores" id="goalScore"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md">
+                                <!-- <div class="display">Crystals Held: <span class="counts" id="currentScore"></span></div>
+                                    <div class="display">Crystals to Steal: <span class="counts" id="goalScore"></span></div> -->
+                                <div class="display">Successful Heists: <span class="counts" id="wins"></span></div>
+                                <div class="display">Dragon Meals: <span class="counts" id="losses"></span></div>
+                                <button onclick="crystalGame.newGame()" id="newGame">New Game</button>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-md-8">
                         <div class="row">
@@ -58,11 +73,6 @@
                             <div id="commentary"></div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-2">
-                    <div onclick="crystalGame.newGame()" id="newGame">New Game</div>
                 </div>
             </div>
         </div>
