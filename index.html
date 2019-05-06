@@ -10,14 +10,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Niconne" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bad+Script|Pacifico" rel="stylesheet">
     <!-- Local CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- jQuery 3.3.1 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
-<body>
+<body class="d-flex flex-column">
     <div class="bg">
         <div class="container">
             <div class="row">
@@ -27,11 +27,11 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="row">
-                            <div class="col-sm">
+                            <div class="col">
                                 <div class="display">Bags:</div>
                                 <div class="scores" id="currentScore"></div>
                             </div>
-                            <div class="col-sm">
+                            <div class="col">
                                 <div class="display">Goal:</div>
                                 <div class="scores" id="goalScore"></div>
                             </div>
@@ -75,24 +75,39 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="container">
             <div class="footer">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <h5>Music Controls</h5>
-                        <audio id="bgm" controls autoplay>
+                        <h5>Music Controls <br> "Resurrections" by Lena Raine</h5>
+                        <audio class="audio" id="bgm" controls autoplay loop>
                             <source src="assets/audio/celesteResurrections.mp3">
-                        </audio>
-                        <audio id="win">
-                            <source src="assets/audio/win.wav" type="audio/mpeg">
-                        </audio>
-                        <audio id="lose">
-                            <source src="assets/audio/lose.wav" type="audio/mpeg">
                         </audio>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- Audio -->
+    <audio class="audio" id="win">
+        <source src="assets/audio/win.wav" type="audio/mpeg">
+    </audio>
+    <audio class="audio" id="lose">
+        <source src="assets/audio/lose.wav" type="audio/mpeg">
+    </audio>
+    <audio class="audio crystalSFX" id="crystal-1">
+        <source src="assets/audio/crystal-1.mp3" type="audio/mpeg">
+    </audio>
+    <audio class="audio crystalSFX" id="crystal-2">
+        <source src="assets/audio/crystal-2.mp3" type="audio/mpeg">
+    </audio>
+    <audio class="audio crystalSFX" id="crystal-3">
+        <source src="assets/audio/crystal-3.mp3" type="audio/mpeg">
+    </audio>
+    <audio class="audio crystalSFX" id="crystal-4">
+        <source src="assets/audio/crystal-4.mp3" type="audio/mpeg">
+    </audio>
     <!-- Local JavaScript -->
     <script src="assets/javascript/game.js"></script>
 </body>
